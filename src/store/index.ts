@@ -1,15 +1,16 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { getters, state } from '@/store/movies';
+import { getters, mutations, state } from '@/store/movies';
 
-export const LOAD_MOVIE = 'LOAD_MOVIE';
-export const LOAD_NEXT_MOVIE = 'LOAD_NEXT_MOVIE';
+// export const LOAD_MOVIE = 'LOAD_MOVIE';
+// export const LOAD_NEXT_MOVIE = 'LOAD_NEXT_MOVIE';
 
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state,
     getters,
+    mutations,
 });
 
 // export default new Vuex.Store(Movies)

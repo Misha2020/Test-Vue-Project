@@ -13,6 +13,10 @@
 </style>
 
 <style lang="less">
+  body {
+    overflow-y: hidden;
+    height: 100vh;
+  }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

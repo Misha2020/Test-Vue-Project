@@ -22,7 +22,7 @@
         components: { MovieItem },
         directives: { infiniteScroll }
     })
-    export default class Popular extends Vue {
+    export default class Upcoming extends Vue {
         @Getter movies: Movie[];
         @Mutation loadMovies;
         @Mutation loadNextMovies;
@@ -34,7 +34,7 @@
         }
 
         public loadMore() {
-            moviesService.loadPopular(this.page)
+            moviesService.loadUpcoming(this.page)
                 .then((response: any) => {
                     response.data.page === 1 ?
                         this.loadMovies(response.data.results) :
@@ -44,15 +44,3 @@
         }
     }
 </script>
-
-<style lang="less">
-    .popular-wrapper {
-        overflow-y: auto;
-        height: 100vh;
-        padding-top: 20px;
-        .movies {
-            display: flex;
-            flex-wrap: wrap;
-        }
-    }
-</style>

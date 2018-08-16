@@ -18,7 +18,7 @@ export default new Router({
       beforeEnter: (to, from, next) => {
           if (localStorage.getItem('api_key')) {
               next({
-                  path: '/popular',
+                  path: '/home',
               });
           } else {
               next();
@@ -26,66 +26,79 @@ export default new Router({
       },
     },
       {
-          path: '/popular',
-          name: 'popular',
-          component: () => import('./components/popular/popular.vue'),
-          beforeEnter: (to, from, next) => {
-              if (!localStorage.getItem('api_key')) {
-                  next({
-                      path: '/login',
-                  });
-              } else {
-                  if (!sessionStorage.getItem('session_id')) {
-                      // const apiKey = localStorage.getItem('api_key');
-                      // const requestToken = localStorage.getItem('request_token');
-                      //
-                      // axios.post(
-                      //     `${API_BASE_URL}/3/authentication/session/new?api_key=${apiKey}`,
-                      //     { request_token: requestToken })
-                      //     .then((response: any) => {
-                      //         console.log(response);
-                      //         sessionStorage.setItem('session_id', response.session_id);
-                      //     })
-                      //     .catch((error) => {
-                      //         console.log(error);
-                      //     });
-                      next();
-                  } else {
-                      next();
-                  }
-              }
-          },
-      },
-      {
-          path: '/recommendations',
-          name: 'recommendations',
-          component: () => import('./components/recommendations/Recommendations.vue'),
-          beforeEnter: (to, from, next) => {
-              if (!localStorage.getItem('api_key')) {
-                  next({
-                      path: '/login',
-                  });
-              } else {
-                  if (!sessionStorage.getItem('session_id')) {
-                      // const apiKey = localStorage.getItem('api_key');
-                      // const requestToken = localStorage.getItem('request_token');
-                      //
-                      // axios.post(
-                      //     `${API_BASE_URL}/3/authentication/session/new?api_key=${apiKey}`,
-                      //     { request_token: requestToken })
-                      //     .then((response: any) => {
-                      //         console.log(response);
-                      //         sessionStorage.setItem('session_id', response.session_id);
-                      //     })
-                      //     .catch((error) => {
-                      //         console.log(error);
-                      //     });
-                      next();
-                  } else {
-                      next();
-                  }
-              }
-          },
+        path: '/home',
+        name: 'home',
+        component: () => import('./components/home/home.vue'),
+        redirect: { name: 'popular'},
+        children: [
+            {
+                path: 'popular',
+                name: 'popular',
+                component: () => import('./components/popular/popular.vue'),
+                beforeEnter: (to, from, next) => {
+                    if (!localStorage.getItem('api_key')) {
+                        next({
+                            path: '/login',
+                        });
+                    } else {
+                        if (!sessionStorage.getItem('session_id')) {
+                            // const apiKey = localStorage.getItem('api_key');
+                            // const requestToken = localStorage.getItem('request_token');
+                            //
+                            // axios.post(
+                            //     `${API_BASE_URL}/3/authentication/session/new?api_key=${apiKey}`,
+                            //     { request_token: requestToken })
+                            //     .then((response: any) => {
+                            //         console.log(response);
+                            //         sessionStorage.setItem('session_id', response.session_id);
+                            //     })
+                            //     .catch((error) => {
+                            //         console.log(error);
+                            //     });
+                            next();
+                        } else {
+                            next();
+                        }
+                    }
+                },
+            },
+            {
+                path: 'recommendations',
+                name: 'recommendations',
+                component: () => import('./components/recommendations/Recommendations.vue'),
+                beforeEnter: (to, from, next) => {
+                    if (!localStorage.getItem('api_key')) {
+                        next({
+                            path: '/login',
+                        });
+                    } else {
+                        if (!sessionStorage.getItem('session_id')) {
+                            // const apiKey = localStorage.getItem('api_key');
+                            // const requestToken = localStorage.getItem('request_token');
+                            //
+                            // axios.post(
+                            //     `${API_BASE_URL}/3/authentication/session/new?api_key=${apiKey}`,
+                            //     { request_token: requestToken })
+                            //     .then((response: any) => {
+                            //         console.log(response);
+                            //         sessionStorage.setItem('session_id', response.session_id);
+                            //     })
+                            //     .catch((error) => {
+                            //         console.log(error);
+                            //     });
+                            next();
+                        } else {
+                            next();
+                        }
+                    }
+                },
+            },
+            {
+                path: 'movie/:id',
+                name: 'movieDetails',
+                component: () => import('./components/movie-details/movie-details.vue'),
+            },
+        ],
       },
   ],
 });

@@ -3,7 +3,6 @@
          v-infinite-scroll="loadMore"
          infinite-scroll-disabled="busy"
          infinite-scroll-distance="20">
-        <nav-menu></nav-menu>
         <div class="movies">
             <movie-item v-for="movie in movies" :movie="movie"></movie-item>
         </div>
@@ -17,11 +16,10 @@
     import { HTTP } from '../../http/http-common';
     import { Movie } from "../../types/Movie";
     import MovieItem from "../movie-item/movie-item"
-    import NavMenu from "../nav-menu/nav-menu"
     import infiniteScroll from 'vue-infinite-scroll'
 
     @Component({
-        components: { MovieItem, NavMenu },
+        components: { MovieItem },
         directives: { infiniteScroll }
     })
     export default class Popular extends Vue {
@@ -29,14 +27,14 @@
         @Mutation loadMovies;
         @Mutation loadNextMovies;
 
-        page = 1;
-        apiKey: string;
+        public page = 1;
+        public apiKey: string;
 
-        created() {
+        public created() {
             this.apiKey = localStorage.getItem('api_key');
         }
 
-        loadMore() {
+        public loadMore() {
             this.getMovies(this.page)
                 .then((response: any) => {
                     response.data.page === 1 ?
@@ -46,7 +44,7 @@
                 })
         }
 
-        getMovies(page) {
+        public getMovies(page) {
             return HTTP.get(`/3/movie/popular?api_key=${this.apiKey}&page=${page} `);
         }
     }

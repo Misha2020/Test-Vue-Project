@@ -33,11 +33,29 @@
 </script>
 
 <style lang="less">
+    @media screen and (max-width: 991px) {
+        .movie {
+            width: 50% !important;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .movie {
+            width: 100% !important;
+        }
+    }
+
+    @media screen and (max-width: 479px) {
+        .movie {
+            width: 100% !important;
+            display: block !important;
+        }
+    }
+
     .movie {
         width: 50%;
         display: flex;
         padding: 5px 30px;
-        max-height: 300px;
         img {
             min-height: 278px;
             min-width: 175px;

@@ -23,6 +23,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100%;
+  background-color: #f2f2f2;
 }
 #nav {
   padding: 30px;

@@ -8,9 +8,9 @@ export const state: State = {
 
 export const getters: GetterTree<State, any> = {
     movies: state => state.movies,
-    movieById: state => (id: number) => {
-        return state.movies.find((movie: Movie) => movie.id === id);
-    },
+    // movieById: state => (id: number) => {
+    //     return state.movies.find((movie: Movie) => movie.id === id);
+    // },
 };
 
 export const mutations: MutationTree<State> = {

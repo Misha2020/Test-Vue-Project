@@ -1,9 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import axios from 'axios';
 
-import { API_BASE_URL } from '@/constants';
 import { authService } from './services/auth.service';
+import { moviesService } from './services/movies.service';
 
 Vue.use(Router);
 

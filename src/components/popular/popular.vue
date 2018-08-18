@@ -50,9 +50,9 @@
         overflow-y: auto;
         height: 100vh;
         padding-top: 20px;
-        .movies {
-            display: flex;
-            flex-wrap: wrap;
-        }
+    }
+    .movies {
+        display: flex;
+        flex-wrap: wrap;
     }
 </style>

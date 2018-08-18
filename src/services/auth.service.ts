@@ -1,7 +1,4 @@
-import axios from 'axios';
-
 import { HTTP } from '@/http/http-common';
-import { API_BASE_URL } from '@/constants';
 
 class AuthService {
     public getToken(apiKey: string) {
@@ -11,21 +8,21 @@ class AuthService {
             });
     }
 
-    private getPermission(token: string, apiKey: string) {
-        localStorage.setItem('api_key', apiKey);
-        localStorage.setItem('request_token', token);
-        window.location.href =
-            `https://www.themoviedb.org/authenticate/${token}?redirect_to=http://localhost:8080/#/home/popular`;
-    }
-
     public checkIsAuth(to: any, from: any, next: any) {
-        if (!localStorage.getItem('api_key')) {
+        if (!localStorage.getItem('api_key') && !localStorage.getItem('request_token')) {
             next({
                 path: '/login',
             });
         } else {
             this.checkIsSession(next);
         }
+    }
+
+    private getPermission(token: string, apiKey: string) {
+        localStorage.setItem('api_key', apiKey);
+        localStorage.setItem('request_token', token);
+        window.location.href =
+            `https://www.themoviedb.org/authenticate/${token}?redirect_to=http://localhost:8080/#/home`;
     }
 
     private checkIsSession(next: any) {
@@ -36,10 +33,14 @@ class AuthService {
             const params = new URLSearchParams();
             params.append('request_token', requestToken);
 
-            axios.post(
-                `${API_BASE_URL}/3/authentication/session/new?api_key=${apiKey}`, params)
+            HTTP.post(`/3/authentication/session/new?api_key=${apiKey}`, params)
                 .then((response: any) => {
                     sessionStorage.setItem('session_id', response.data.session_id);
+                }).catch(() => {
+                    localStorage.clear();
+                    next({
+                        path: '/login',
+                    });
                 });
         }
         next();

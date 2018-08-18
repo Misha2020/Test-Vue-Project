@@ -24,8 +24,8 @@
     })
     export default class Upcoming extends Vue {
         @Getter movies: Movie[];
-        @Mutation loadMovies;
-        @Mutation loadNextMovies;
+        @Mutation loadMovies: any;
+        @Mutation loadNextMovies: any;
 
         public page = 1;
 

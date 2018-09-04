@@ -1,12 +1,10 @@
 <template>
     <div class="login-page">
-        <!--<form @submit="onSubmit">-->
-            <div class="form-group">
-                <label for="apiKeyInput">API key</label>
-                <input v-model="apiKey" class="form-control" id="apiKeyInput" placeholder="Enter your API key">
-            </div>
-            <button @click="onSubmit" class="btn btn-primary">Submit</button>
-        <!--</form>-->
+        <div class="form-group">
+            <label for="apiKeyInput">API key</label>
+            <input v-model="apiKey" class="form-control" id="apiKeyInput" placeholder="Enter your API key">
+        </div>
+        <button @click="onSubmit" class="btn btn-primary">Submit</button>
     </div>
 </template>
 

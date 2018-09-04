@@ -30,9 +30,6 @@ class AuthService {
             const apiKey = localStorage.getItem('api_key');
             const requestToken: any = localStorage.getItem('request_token');
 
-            // const params = new URLSearchParams();
-            // params.append('request_token', requestToken);
-
             HTTP.post(`/3/authentication/session/new?api_key=${apiKey}`, {'request_token': requestToken})
                 .then((response: any) => {
                     sessionStorage.setItem('session_id', response.data.session_id);

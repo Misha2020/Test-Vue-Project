@@ -6,7 +6,6 @@
                 <div class="title"> {{movie.title}} ({{releaseYear}})</div>
             </router-link>
             <div class="description"> {{movie.overview}}</div>
-            <!--<div class="release-date">Release date: {{movie.release_date}}</div>-->
             <star-rating
                     @rating-selected="onRateSelected($event)"
                     v-model="movie.vote_average"

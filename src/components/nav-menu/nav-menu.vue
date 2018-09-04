@@ -14,14 +14,13 @@
 
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator';
-    import router from '../../router';
 
     @Component()
     export default class NavMenu extends Vue {
         public logout() {
             localStorage.clear();
             sessionStorage.clear();
-            router.push({path: '/login'})
+            this.$router.push({path: '/login'})
         }
     }
 </script>

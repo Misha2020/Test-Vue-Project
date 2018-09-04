@@ -7,7 +7,13 @@
             </router-link>
             <div class="description"> {{movie.overview}}</div>
             <!--<div class="release-date">Release date: {{movie.release_date}}</div>-->
-            <star-rating v-model="movie.vote_average" :max-rating="10" :star-size="20" :increment="0.5"></star-rating>
+            <star-rating
+                    @rating-selected="onRateSelected($event)"
+                    v-model="movie.vote_average"
+                    :max-rating="10"
+                    :star-size="18"
+                    :increment="0.5">
+            </star-rating>
         </div>
     </div>
 </template>
@@ -16,6 +22,7 @@
     import { Component, Prop, Vue } from "vue-property-decorator";
     import StarRating from 'vue-star-rating'
     import { Movie } from "../../types/Movie";
+    import { moviesService } from '../../services/movies.service'
 
     @Component({
         components: {
@@ -28,6 +35,10 @@
 
         public created() {
             this.releaseYear = new Date(this.movie.release_date).getFullYear();
+        }
+
+        onRateSelected(value) {
+            moviesService.rateMovie(this.movie.id, { value });
         }
     }
 </script>
@@ -49,6 +60,9 @@
         .movie {
             width: 100% !important;
             display: block !important;
+            .title {
+                margin-top: 10px;
+            }
         }
     }
 
@@ -64,6 +78,7 @@
         }
         .info {
             margin-left: 10px;
+            min-width: 190px;
             a {
                 text-decoration: none;
             }

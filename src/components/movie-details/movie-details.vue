@@ -15,7 +15,7 @@
             <div class="info-line"><strong>Release date:</strong> {{movie.release_date}}</div>
             <div class="info-line" v-if="movie.budget"><strong>Budget:</strong> {{movie.budget}}</div>
             <div class="info-line" v-if="movie.runtime"><strong>Runtime:</strong> {{movie.runtime}}</div>
-            <div class="info-line" v-if="movie.vote_average"><strong>Vote average:</strong> {{movie.vote_average}}</div>
+            <!--<div class="info-line" v-if="movie.vote_average"><strong>Vote average:</strong> {{movie.vote_average}}</div>-->
             <div class="info-line"><strong>Vote count:</strong> {{movie.vote_count}}</div>
             <star-rating
                     @rating-selected="onRateSelected($event)"
@@ -46,7 +46,7 @@
 
     import { moviesService } from '../../services/movies.service'
     import { MovieDetailsType } from '../../types/MovieDetails';
-    import StarRating from 'vue-star-rating'
+    import StarRating from 'vue-star-rating/src'
 
     @Component({
         components: {
@@ -65,9 +65,7 @@
         }
 
         onRateSelected(value) {
-            moviesService.rateMovie(this.movie.id, { value }).then(() => {
-                console.log('Rate success');
-            })
+            moviesService.rateMovie(this.movie.id, { value });
         }
     }
 </script>

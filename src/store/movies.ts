@@ -3,14 +3,11 @@ import { State } from '@/types/State';
 import { Movie } from '@/types/Movie';
 
 export const state: State = {
-  movies: [],
+    movies: [],
 };
 
 export const getters: GetterTree<State, any> = {
     movies: state => state.movies,
-    // movieById: state => (id: number) => {
-    //     return state.movies.find((movie: Movie) => movie.id === id);
-    // },
 };
 
 export const mutations: MutationTree<State> = {

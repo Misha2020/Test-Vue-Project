@@ -2,11 +2,9 @@ import { HTTP } from '@/http/http-common';
 
 class MoviesService {
     private apiKey: any;
-    private sessionId: any;
 
     constructor() {
         this.apiKey = localStorage.getItem('api_key');
-        this.sessionId = sessionStorage.getItem('session_id');
     }
 
     public loadPopular(page: number) {
@@ -22,7 +20,9 @@ class MoviesService {
     }
 
     public rateMovie(movieId: number, body: { value: string }) {
-        return HTTP.post(`/3/movie/${movieId}/rating?api_key=${this.apiKey}&session_id=${this.sessionId}`, body);
+        const sessionId = sessionStorage.getItem('session_id');
+
+        return HTTP.post(`/3/movie/${movieId}/rating?api_key=${this.apiKey}&session_id=${sessionId}`, body);
     }
 }
 

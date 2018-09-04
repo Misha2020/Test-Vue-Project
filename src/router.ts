@@ -2,7 +2,6 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 import { authService } from './services/auth.service';
-import { moviesService } from './services/movies.service';
 
 Vue.use(Router);
 
@@ -17,13 +16,7 @@ export default new Router({
       name: 'login',
       component: () => import('./components/login/login.vue'),
       beforeEnter: (to, from, next) => {
-          if (localStorage.getItem('api_key')) {
-              next({
-                  path: '/home',
-              });
-          } else {
-              next();
-          }
+          localStorage.getItem('api_key') ? next({ path: '/home' }) : next();
       },
     },
       {

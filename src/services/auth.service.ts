@@ -22,7 +22,7 @@ class AuthService {
         localStorage.setItem('api_key', apiKey);
         localStorage.setItem('request_token', token);
         window.location.href =
-            `https://www.themoviedb.org/authenticate/${token}?redirect_to=http://localhost:8080/#/home`;
+            `https://www.themoviedb.org/authenticate/${token}?redirect_to=${process.env.VUE_APP_HOME_URL}/#/home`;
     }
 
     private checkIsSession(next: any) {

@@ -2,28 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6e1b8b6-675b-4220-89d9-cbd933928847" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/wdio-tests/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/wdio-tests/test/pageobject/auth.page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/wdio-tests/test/pageobject/movie-list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/wdio-tests/test/pageobject/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/wdio-tests/test/specs/auth.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/wdio-tests/test/specs/check-auth.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/wdio-tests/test/specs/movie-details.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env.development" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env.production" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/login/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/movie-details/movie-details.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movie-details/movie-details.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/movie-item/movie-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movie-item/movie-item.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/movie-list/movie-list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movie-list/movie-list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nav-menu/nav-menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav-menu/nav-menu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/popular/popular.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/popular/popular.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/upcoming/upcoming.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/upcoming/upcoming.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/movies.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/movies.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/Movie.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/Movie.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/HelloWorld.spec.ts" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,44 +38,53 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="development" value="1" />
+          <entry key="gitignore" value="1" />
           <entry key="html" value="2" />
           <entry key="ico" value="1" />
           <entry key="js" value="67" />
-          <entry key="json" value="14" />
+          <entry key="json" value="15" />
           <entry key="png" value="12" />
-          <entry key="ts" value="35" />
-          <entry key="vue" value="21" />
+          <entry key="production" value="1" />
+          <entry key="sh" value="1" />
+          <entry key="ts" value="44" />
+          <entry key="vue" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="2" />
           <entry key="Image" value="13" />
-          <entry key="JSON" value="14" />
+          <entry key="JSON" value="15" />
           <entry key="JavaScript" value="67" />
-          <entry key="TypeScript" value="35" />
-          <entry key="Vue.js" value="21" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="TypeScript" value="44" />
+          <entry key="Vue.js" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="TsLintLanguageService" value="5" />
-          <entry key="TypeScriptServerServiceImpl" value="7" />
+          <entry key="TsLintLanguageService" value="6" />
+          <entry key="TypeScriptServerServiceImpl" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="development" value="68" />
           <entry key="js" value="2206" />
-          <entry key="json" value="19" />
-          <entry key="ts" value="24" />
+          <entry key="json" value="47" />
+          <entry key="production" value="8" />
+          <entry key="sh" value="1" />
+          <entry key="ts" value="50" />
           <entry key="vue" value="199" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="19" />
+          <entry key="JSON" value="47" />
           <entry key="JavaScript" value="2206" />
-          <entry key="TypeScript" value="24" />
+          <entry key="PLAIN_TEXT" value="77" />
+          <entry key="TypeScript" value="50" />
           <entry key="Vue.js" value="199" />
         </counts>
       </usages-collector>
@@ -103,81 +96,93 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/wdio-tests/test/specs/auth.spec.js">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5">
-              <caret line="7" column="57" lean-forward="true" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/wdio-tests/test/specs/movie-details.spec.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+            <state relative-caret-position="204">
+              <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/wdio-tests/test/specs/check-auth.spec.js">
+        <entry file="file://$PROJECT_DIR$/deploy.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+            <state relative-caret-position="153">
+              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/wdio-tests/wdio.conf.js">
+        <entry file="file://$PROJECT_DIR$/.env.production">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="44" column="24" lean-forward="true" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
+            <state relative-caret-position="34">
+              <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/wdio-tests/test/pageobject/page.js">
+        <entry file="file://$PROJECT_DIR$/.env.development">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="23" selection-start-column="23" selection-end-column="23" />
+            <state relative-caret-position="34">
+              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/wdio-tests/test/pageobject/movie-list.js">
+        <entry file="file://$PROJECT_DIR$/src/services/movies.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/wdio-tests/test/pageobject/auth.page.js">
+        <entry file="file://$PROJECT_DIR$/src/router.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="6" selection-start-line="2" selection-end-line="2" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/wdio-tests/test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/movies.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+            <state relative-caret-position="100">
+              <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
               <folding>
-                <element signature="e#0#48#0" expanded="true" />
+                <element signature="e#0#22#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/http/http-common.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/auth.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -200,6 +205,7 @@
       <find>NavMenu</find>
       <find>browser.url</find>
       <find>services</find>
+      <find>localhost</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -208,9 +214,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/home/popular/popular.vue" />
-        <option value="$PROJECT_DIR$/src/components/home/nav-menu/nav-menu.vue" />
-        <option value="$PROJECT_DIR$/src/store/index.ts" />
         <option value="$PROJECT_DIR$/tslint.json" />
         <option value="$PROJECT_DIR$/src/components/recommendations/Recommendations.vue" />
         <option value="$PROJECT_DIR$/src/components/login/Login.vue" />
@@ -222,7 +225,6 @@
         <option value="$PROJECT_DIR$/src/router.ts" />
         <option value="$PROJECT_DIR$/src/components/login/login.vue" />
         <option value="$PROJECT_DIR$/src/constants/index.ts" />
-        <option value="$PROJECT_DIR$/src/services/auth.service.ts" />
         <option value="$PROJECT_DIR$/src/App.vue" />
         <option value="$PROJECT_DIR$/tests/wdio-tests/auth.js" />
         <option value="$PROJECT_DIR$/test/specs/test_page.js" />
@@ -247,7 +249,6 @@
         <option value="$PROJECT_DIR$/node_modules/vue-star-rating/index.d.ts" />
         <option value="$PROJECT_DIR$/src/components/movie-item/movie-item.vue" />
         <option value="$PROJECT_DIR$/src/components/movie-list/movie-list.vue" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/tests/wdio-tests/test/pageobject/Page.js" />
         <option value="$PROJECT_DIR$/tests/wdio-tests/test/pageobject/api.page.js" />
         <option value="$PROJECT_DIR$/tests/wdio-tests/test/pageobject/page.js" />
@@ -259,6 +260,11 @@
         <option value="$PROJECT_DIR$/tests/wdio-tests/test/specs/auth.spec.js" />
         <option value="$PROJECT_DIR$/tests/wdio-tests/wdio.conf.js" />
         <option value="$PROJECT_DIR$/tests/wdio-tests/test/specs/check-auth.spec.js" />
+        <option value="$PROJECT_DIR$/.env.production" />
+        <option value="$PROJECT_DIR$/.env.development" />
+        <option value="$PROJECT_DIR$/src/services/auth.service.ts" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/deploy.sh" />
       </list>
     </option>
   </component>
@@ -281,8 +287,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1295" />
-    <option name="y" value="455" />
+    <option name="x" value="2104" />
+    <option name="y" value="112" />
     <option name="width" value="1555" />
     <option name="height" value="883" />
   </component>
@@ -302,59 +308,7 @@
             <path>
               <item name="TestVueProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="TestVueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TestVueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TestVueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TestVueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TestVueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TestVueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TestVueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="popular" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TestVueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TestVueProject" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TestVueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TestVueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="wdio-tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TestVueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TestVueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="wdio-tests" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TestVueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TestVueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="wdio-tests" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="pageobject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TestVueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TestVueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="wdio-tests" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="specs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -446,8 +400,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.serve" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.serve" />
         <item itemvalue="npm.lint" />
         <item itemvalue="Mocha.tests\wdio-tests\test\specs\test.js" />
       </list>
@@ -505,7 +459,7 @@
       <workItem from="1536601906716" duration="8771000" />
       <workItem from="1536650914610" duration="172000" />
       <workItem from="1536699962998" duration="3685000" />
-      <workItem from="1536732632808" duration="4051000" />
+      <workItem from="1536732632808" duration="6186000" />
     </task>
     <servers />
   </component>
@@ -533,7 +487,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127954000" />
+    <option name="totallyTimeSpent" value="130089000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -548,19 +502,19 @@
     <frame x="1912" y="112" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.61811024" visible="true" weight="0.1977612" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.62150836" visible="true" weight="0.27452025" />
       <window_info id="Structure" order="1" sideWeight="0.28719008" side_tool="true" weight="0.3442953" />
-      <window_info id="npm" order="2" sideWeight="0.38188976" side_tool="true" weight="0.1977612" />
+      <window_info id="npm" order="2" sideWeight="0.3784916" side_tool="true" weight="0.27452025" />
       <window_info id="Favorites" order="3" sideWeight="0.45797414" side_tool="true" weight="0.33635396" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286517" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.18240343" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33583692" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32867134" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.41845495" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.27896994" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32939914" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32939914" />
@@ -577,49 +531,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/wdio-tests/clisk-on-submit-btn.png" />
-    <entry file="file://$PROJECT_DIR$/tests/wdio-tests/node_modules/request/request.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="862" column="1" lean-forward="true" selection-start-line="862" selection-start-column="1" selection-end-line="862" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/wdio-tests/errorShots/ERROR_firefox_2018-09-09T19-01-35.085Z.png" />
-    <entry file="file://$PROJECT_DIR$/tests/wdio-tests/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/node/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="247" column="12" selection-start-line="247" selection-start-column="12" selection-end-line="247" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/wdio-tests/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/movie-details/movie-details.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="43" column="7" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/vue-class-component/lib/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/upcoming/upcoming.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -697,24 +608,10 @@
     <entry file="file://$PROJECT_DIR$/src/assets/logo.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/movies.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/index.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/wdio-tests/errorShots/ERROR_chrome_2018-09-09T21-23-21.039Z.png" />
-    <entry file="file://$PROJECT_DIR$/src/constants/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/home/home.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -736,20 +633,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/http/http-common.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/auth.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#718#780#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -776,13 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -843,8 +722,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/wdio-tests/wdio.conf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="24" lean-forward="true" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
+        <state relative-caret-position="792">
+          <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -853,7 +732,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/wdio-tests/test/pageobject/auth.page.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
+        <state relative-caret-position="36">
           <caret line="2" column="6" selection-start-line="2" selection-end-line="2" selection-end-column="6" />
         </state>
       </provider>
@@ -867,22 +746,120 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/wdio-tests/test/specs/auth.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="7" column="57" lean-forward="true" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+        <state relative-caret-position="2">
+          <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/wdio-tests/test/specs/movie-details.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+        <state relative-caret-position="97">
+          <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/wdio-tests/test/specs/check-auth.spec.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="62" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shims-tsx.d.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/constants/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="50" selection-start-column="50" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/http/http-common.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/node/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="187" column="12" selection-start-line="187" selection-start-column="12" selection-end-line="187" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/movies.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.development">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.production">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/auth.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deploy.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
         </state>
       </provider>
     </entry>

@@ -3,12 +3,12 @@
 </template>
 
 <script lang="ts">
-    import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 
-    import MovieList from "../movie-list/movie-list"
+import MovieList from '@/components/movie-list/movie-list.vue';
 
-    @Component({
-        components: { MovieList }
-    })
-    export default class Popular extends Vue { }
+@Component({
+    components: { MovieList },
+})
+export default class Popular extends Vue { }
 </script>

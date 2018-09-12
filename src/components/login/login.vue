@@ -9,20 +9,20 @@
 </template>
 
 <script lang="ts">
-    import Vue from 'vue';
-    import { Component } from 'vue-property-decorator';
+import Vue from 'vue';
+import { Component } from 'vue-property-decorator';
 
-    import { authService } from '../../services/auth.service'
+import { authService } from '../../services/auth.service';
 
-    @Component({})
-    export default class Login extends Vue {
-        apiKey: string = '';
+@Component({})
+export default class Login extends Vue {
+    public apiKey: string = '';
 
-        onSubmit() {
-            authService.getToken(this.apiKey);
+    public onSubmit() {
+        authService.getToken(this.apiKey);
 
-        }
     }
+}
 </script>
 
 <style lang="less">

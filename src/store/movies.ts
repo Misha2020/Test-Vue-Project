@@ -7,22 +7,22 @@ export const state: State = {
 };
 
 export const getters: GetterTree<State, any> = {
-    movies: state => state.movies,
+    movies: (data) => data.movies,
 };
 
 export const mutations: MutationTree<State> = {
-    addMovie(state: any, newMovie: Movie) {
-        state.movies = [
-            ...state.movies,
+    addMovie(data: any, newMovie: Movie) {
+        data.movies = [
+            ...data.movies,
             newMovie,
         ];
     },
-    loadMovies(state, movies: Movie[]) {
-      state.movies = movies;
+    loadMovies(data, movies: Movie[]) {
+        data.movies = movies;
     },
-    loadNextMovies(state, movies: Movie[]) {
-        state.movies = [
-            ... state.movies,
+    loadNextMovies(data, movies: Movie[]) {
+        data.movies = [
+            ... data.movies,
             ...movies,
         ];
     },

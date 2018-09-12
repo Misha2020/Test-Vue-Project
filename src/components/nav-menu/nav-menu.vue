@@ -13,16 +13,16 @@
 </template>
 
 <script lang="ts">
-    import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 
-    @Component()
-    export default class NavMenu extends Vue {
-        public logout() {
-            localStorage.clear();
-            sessionStorage.clear();
-            this.$router.push({path: '/login'})
-        }
+@Component({})
+export default class NavMenu extends Vue {
+    public logout() {
+        localStorage.clear();
+        sessionStorage.clear();
+        this.$router.push({path: '/login'});
     }
+}
 </script>
 
 <style lang="less">

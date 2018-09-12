@@ -18,28 +18,28 @@
 </template>
 
 <script lang="ts">
-    import { Component, Prop, Vue } from "vue-property-decorator";
-    import StarRating from 'vue-star-rating'
-    import { Movie } from "../../types/Movie";
-    import { moviesService } from '../../services/movies.service'
+import { Component, Prop, Vue } from 'vue-property-decorator';
+import StarRating from 'vue-star-rating';
+import { Movie } from '../../types/Movie';
+import { moviesService } from '../../services/movies.service';
 
-    @Component({
-        components: {
-            StarRating
-        }
-    })
-    export default class MovieItem extends Vue {
-        @Prop() movie: Movie;
-        releaseYear: string;
+@Component({
+    components: {
+        StarRating,
+    },
+})
+export default class MovieItem extends Vue {
+    @Prop() public movie!: Movie;
+    public releaseYear: any;
 
-        public created() {
-            this.releaseYear = new Date(this.movie.release_date).getFullYear();
-        }
-
-        onRateSelected(value) {
-            moviesService.rateMovie(this.movie.id, { value });
-        }
+    public created() {
+        this.releaseYear = new Date(this.movie.release_date).getFullYear();
     }
+
+    public onRateSelected(value: any) {
+        moviesService.rateMovie(this.movie.id, { value });
+    }
+}
 </script>
 
 <style lang="less">

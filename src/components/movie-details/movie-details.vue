@@ -41,32 +41,32 @@
 </template>
 ф
 <script lang="ts">
-    import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue } from 'vue-property-decorator';
 
-    import { moviesService } from '../../services/movies.service'
-    import { MovieDetailsType } from '../../types/MovieDetails';
-    import StarRating from 'vue-star-rating'
+import { moviesService } from '../../services/movies.service';
+import { MovieDetailsType } from '../../types/MovieDetails';
+import StarRating from 'vue-star-rating';
 
-    @Component({
-        components: {
-            StarRating
-        }
-    })
-    export default class MovieDetails extends Vue {
-        movie = {} as MovieDetailsType;
-        releaseYear = '' as  any;
+@Component({
+    components: {
+        StarRating,
+    },
+})
+export default class MovieDetails extends Vue {
+    public movie = {} as MovieDetailsType;
+    public releaseYear = '' as  any;
 
-        created() {
-            moviesService.loadMovieById(this.$route.params.id).then(responseMovie => {
-                this.movie = responseMovie.data;
-                this.releaseYear = new Date(this.movie.release_date).getFullYear();
-            })
-        }
-
-        onRateSelected(value) {
-            moviesService.rateMovie(this.movie.id, { value });
-        }
+    public created() {
+        moviesService.loadMovieById(+this.$route.params.id).then((responseMovie: any) => {
+            this.movie = responseMovie.data;
+            this.releaseYear = new Date(this.movie.release_date).getFullYear();
+        });
     }
+
+    public onRateSelected(value: any) {
+        moviesService.rateMovie(this.movie.id, { value });
+    }
+}
 </script>
 
 <style lang="less">

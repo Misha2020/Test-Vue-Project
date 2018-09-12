@@ -1,0 +1,23 @@
+{
+  "name": "wdio-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^4.1.2",
+    "webdriverio": "^4.13.2"
+  },
+  "devDependencies": {
+    "chai-webdriverio": "^0.4.3",
+    "mocha": "^5.2.0",
+    "wdio-mocha-framework": "^0.6.3"
+  },
+  "scripts": {
+    "test": "wdio"
+  },
+  "author": "",
+  "license": "ISC"
+}

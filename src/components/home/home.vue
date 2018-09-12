@@ -4,16 +4,16 @@
         <router-view></router-view>
     </div>
 </template>
-<script lang="ts">
-    import { Component, Vue } from 'vue-property-decorator';
-    import NavMenu from "../nav-menu/nav-menu"
+<script lang='ts'>
+import { Component, Vue } from 'vue-property-decorator';
+import NavMenu from '@/components/nav-menu/nav-menu.vue';
 
-    @Component({
-        components: {
-            NavMenu
-        }
-    })
-    export default class Home extends Vue {}
+@Component({
+    components: {
+        NavMenu,
+    },
+})
+export default class Home extends Vue {}
 </script>
 
 <style lang="less">

@@ -10,46 +10,45 @@
 </template>
 
 <script lang="ts">
-    import { Component, Prop, Vue } from "vue-property-decorator";
-    import { Getter, Mutation } from "vuex-class";
-    import infiniteScroll from 'vue-infinite-scroll'
+import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Getter, Mutation } from 'vuex-class';
+import { moviesService } from '../../services/movies.service';
+import { Movie } from '../../types/Movie';
 
-    import MovieItem from "../movie-item/movie-item"
-    import { moviesService } from '../../services/movies.service'
-    import { Movie } from '../../types/Movie';
+import infiniteScroll from 'vue-infinite-scroll';
+import MovieItem from '@/components/movie-item/movie-item.vue';
 
-    @Component({
-        components: { MovieItem },
-        directives: { infiniteScroll }
-    })
-    export default class MovieList extends Vue {
-        @Prop() movieListType: string;
+@Component({
+    components: { MovieItem },
+    directives: { infiniteScroll },
+})
+export default class MovieList extends Vue {
+    @Prop() public movieListType!: string;
 
-        @Getter movies: Movie[];
+    @Getter public movies!: Movie[];
 
-        @Mutation loadMovies: any;
-        @Mutation loadNextMovies: any;
+    @Mutation public loadMovies: any;
+    @Mutation public loadNextMovies: any;
 
-        public page = 1;
+    public page = 1;
 
-        public created() {
-            this.loadMore();
-
-        }
-
-        public loadMore() {
-            this.movieListType === 'popular' ?
-                moviesService.loadPopular(this.page).then(response => this.onMoviesLoaded(response)) :
-                moviesService.loadUpcoming(this.page).then(response => this.onMoviesLoaded(response));
-        }
-
-        public onMoviesLoaded(response: any) {
-            response.data.page === 1 ?
-                this.loadMovies(response.data.results) :
-                this.loadNextMovies(response.data.results);
-            this.page = +response.data.page + 1;
-        }
+    public created() {
+        this.loadMore();
     }
+
+    public loadMore() {
+        this.movieListType === 'popular' ?
+            moviesService.loadPopular(this.page).then((response) => this.onMoviesLoaded(response)) :
+            moviesService.loadUpcoming(this.page).then((response) => this.onMoviesLoaded(response));
+    }
+
+    public onMoviesLoaded(response: any) {
+        response.data.page === 1 ?
+            this.loadMovies(response.data.results) :
+            this.loadNextMovies(response.data.results);
+        this.page = +response.data.page + 1;
+    }
+}
 </script>
 <style lang="less">
     .movie-list-wrapper {

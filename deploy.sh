@@ -10,16 +10,8 @@ npm run build
 cd dist
 
 # if you are deploying to a custom domain
-# echo 'www.example.com' > CNAME
+echo 'http://misha.bondarchuk.surge.sh' > CNAME
 
-git add -A
-git commit -m 'deploy'
-
-# if you are deploying to https://<USERNAME>.github.io
-# https://github.com/MykhayloBondacrhuk/Test-Vue-Project.git
-git push -f https://github.com/MykhayloBondacrhuk.github.io.git master
-
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
+surge
 
 cd -

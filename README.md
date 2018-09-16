@@ -20,12 +20,6 @@ npm run build
 npm run lint
 ```
 
-### Run your unit tests
+### Run your tests
 ```
-npm run test:unit
-```
-
-### Run your end-to-end tests
-```
-npm run test:e2e
-```
+npm run test

@@ -59,6 +59,7 @@ export default class MovieItem extends Vue {
         .movie {
             width: 100% !important;
             display: block !important;
+            padding: 0 !important;
             .title {
                 margin-top: 10px;
             }

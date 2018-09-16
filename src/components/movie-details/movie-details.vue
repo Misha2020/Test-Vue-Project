@@ -75,13 +75,17 @@ export default class MovieDetails extends Vue {
             display: block !important;
             padding: 20px 0 !important;
         }
+
+        .info {
+            margin: 0 20px !important;
+        }
     }
 
     .movie-wrapper {
         margin: 0 auto;
         max-width: 1140px;
         display: flex;
-        height: 100%;
+        height: 95%;
         overflow-y: auto;
         padding: 25px 35px;
         background-color: white;

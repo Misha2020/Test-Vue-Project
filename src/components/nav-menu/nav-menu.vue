@@ -26,6 +26,9 @@ export default class NavMenu extends Vue {
 </script>
 
 <style lang="less">
+    .navbar {
+        position: initial !important;
+    }
     .nav-item a {
         color: black;
     }

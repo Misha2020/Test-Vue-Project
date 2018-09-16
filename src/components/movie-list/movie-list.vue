@@ -3,6 +3,7 @@
          v-infinite-scroll="loadMore"
          infinite-scroll-disabled="busy"
          infinite-scroll-distance="20">
+        <nav-menu></nav-menu>
         <div class="movies">
             <movie-item v-for="movie in movies" :movie="movie"></movie-item>
         </div>
@@ -17,9 +18,10 @@ import { Movie } from '../../types/Movie';
 
 import infiniteScroll from 'vue-infinite-scroll';
 import MovieItem from '@/components/movie-item/movie-item.vue';
+import NavMenu from '@/components/nav-menu/nav-menu.vue';
 
 @Component({
-    components: { MovieItem },
+    components: { MovieItem, NavMenu },
     directives: { infiniteScroll },
 })
 export default class MovieList extends Vue {
@@ -54,10 +56,10 @@ export default class MovieList extends Vue {
     .movie-list-wrapper {
         overflow-y: auto;
         height: 100vh;
-        padding-top: 20px;
     }
     .movies {
         display: flex;
         flex-wrap: wrap;
+        margin-top: 20px;
     }
 </style>

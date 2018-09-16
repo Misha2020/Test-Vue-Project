@@ -1,18 +1,12 @@
 <template>
     <div class="home">
-        <nav-menu></nav-menu>
         <router-view></router-view>
     </div>
 </template>
 <script lang='ts'>
 import { Component, Vue } from 'vue-property-decorator';
-import NavMenu from '@/components/nav-menu/nav-menu.vue';
 
-@Component({
-    components: {
-        NavMenu,
-    },
-})
+@Component({})
 export default class Home extends Vue {}
 </script>
 

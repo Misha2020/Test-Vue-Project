@@ -5,7 +5,7 @@ chai.use(chaiWebdriver(browser));
 const URL = 'http://localhost:8080';
 
 describe('movie details page', () => {
-    it('It should get access to next page', function () {
+    it('It should login user', function () {
         browser.url(URL);
 
         browser.setValue('input[id="apiKeyInput"]', '1ccae326a593ca0d20294e664bea1c60');
@@ -19,15 +19,31 @@ describe('movie details page', () => {
         browser.click('input[class="right center"]');
         browser.click('button[id="allow_authentication"]');
         browser.pause(1000);
+    });
 
+    it('it should test movie item', function () {
         browser.click('a[href="#/home/popular"]');
-        browser.isEnabled('div[class="info"]');
-        browser.click('div[class="title"]');
 
+        for (var i = 1; i < 5; i++) {
+            var item = ('//div[' + i + ']/div/a/div');
+            var title = browser.getText(item);
+            console.log('+++++ ' + title);
+            browser.click('//div[' + i + ']/div/a');
+            browser.pause(500);
+            var filmName = browser.getText('div[class="title"]');
+            assert.equal(title, filmName);
+            browser.click('span[class="vue-star-rating-pointer vue-star-rating-star"]');
+            browser.back();
+        }
+    });
+
+    it('it should test scroll', function () {
+        browser.moveToObject('//div[20]/div/a/div');
         browser.pause(1000);
-        browser.click('span[class="vue-star-rating-pointer vue-star-rating-star"]');
+    });
 
+    it('it should logout user', function () {
         browser.click('button[class="btn btn-secondary btn-sm"]');
         chai.expect(browser.getUrl()).to.contain("login");
-    });
+    })
 });

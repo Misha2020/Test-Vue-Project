@@ -1,40 +1,43 @@
 <template>
-    <div class="movie-wrapper" v-if="movie.title">
-        <div class="poster">
-            <img :src="'https://image.tmdb.org/t/p/w185' + movie.poster_path">
-        </div>
-        <div class="info">
-            <div class="title"> {{movie.title}} ({{releaseYear}})</div>
-            <div class="overview"> {{movie.overview}}</div>
-            <div class="info-line">
-                <strong>Genre:</strong>
-                <span v-for="(genre, index) in movie.genres">
+    <div>
+        <nav-menu></nav-menu>
+        <div class="movie-wrapper" v-if="movie.title">
+            <div class="poster">
+                <img :src="'https://image.tmdb.org/t/p/w185' + movie.poster_path">
+            </div>
+            <div class="info">
+                <div class="title"> {{movie.title}} ({{releaseYear}})</div>
+                <div class="overview"> {{movie.overview}}</div>
+                <div class="info-line">
+                    <strong>Genre:</strong>
+                    <span v-for="(genre, index) in movie.genres">
                     {{genre.name}}<span v-if="index !== movie.genres.length -1">,</span>
                 </span>
-            </div>
-            <div class="info-line"><strong>Release date:</strong> {{movie.release_date}}</div>
-            <div class="info-line" v-if="movie.budget"><strong>Budget:</strong> {{movie.budget}}</div>
-            <div class="info-line" v-if="movie.runtime"><strong>Runtime:</strong> {{movie.runtime}}</div>
-            <div class="info-line"><strong>Vote count:</strong> {{movie.vote_count}}</div>
-            <star-rating
-                    @rating-selected="onRateSelected($event)"
-                    class="info-line"
-                    v-model="movie.vote_average"
-                    :max-rating="10"
-                    :star-size="20"
-                    :increment="0.5">
-            </star-rating>
-            <div class="info-line">
-                <strong>Production company:</strong>
-                <span v-for="(company, index) in movie.production_companies">
+                </div>
+                <div class="info-line"><strong>Release date:</strong> {{movie.release_date}}</div>
+                <div class="info-line" v-if="movie.budget"><strong>Budget:</strong> {{movie.budget}}</div>
+                <div class="info-line" v-if="movie.runtime"><strong>Runtime:</strong> {{movie.runtime}}</div>
+                <div class="info-line"><strong>Vote count:</strong> {{movie.vote_count}}</div>
+                <star-rating
+                        @rating-selected="onRateSelected($event)"
+                        class="info-line"
+                        v-model="movie.vote_average"
+                        :max-rating="10"
+                        :star-size="20"
+                        :increment="0.5">
+                </star-rating>
+                <div class="info-line">
+                    <strong>Production company:</strong>
+                    <span v-for="(company, index) in movie.production_companies">
                       {{company.name}}<span v-if="index !== movie.production_companies.length -1">,</span>
                 </span>
-            </div>
-            <div class="info-line">
-                <strong>Production countries:</strong>
-                <span v-for="(country, index) in movie.production_countries">
+                </div>
+                <div class="info-line">
+                    <strong>Production countries:</strong>
+                    <span v-for="(country, index) in movie.production_countries">
                     {{country.name}}<span v-if="index !== movie.production_countries.length -1">,</span>
                 </span>
+                </div>
             </div>
         </div>
     </div>
@@ -46,10 +49,11 @@ import { Component, Vue } from 'vue-property-decorator';
 import { moviesService } from '../../services/movies.service';
 import { MovieDetailsType } from '../../types/MovieDetails';
 import StarRating from 'vue-star-rating';
+import NavMenu from '@/components/nav-menu/nav-menu.vue';
 
 @Component({
     components: {
-        StarRating,
+        StarRating, NavMenu,
     },
 })
 export default class MovieDetails extends Vue {
